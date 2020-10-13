@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        margin: 0%;
+        padding: 0%;
+        background-image: url("img/fondo3.jpg");
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .form {
+        width: 35rem;
+        height: 50rem;
+        margin: 6% auto;
+        background-color: rgba(17, 16, 16, 0.774);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+      }
+      .form h1 {
+        font-size: 4rem;
+      }
+      .table {
+        margin-left: 3rem;
+      }
+      .table input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        color: white;
+        font-size: 1.36rem;
+        padding: 0.7rem 0;
+        outline: none;
+        border: none;
+        border-bottom: 0.1rem solid #fff;
+        background: transparent;
+        letter-spacing: 0.16rem;
+        color: white;
+      }
+      .table input[type="text"]:hover,
+      input[type="password"]:hover,
+      input[type="email"]:hover {
+        color: blue;
+        border-bottom: 0.1rem solid blue;
+      }
+
+      .table input[type="date"],
+      select {
+        background: transparent;
+        color: white;
+      }
+      .table input[type="submit"],
+      input[type="reset"] {
+        background: rgba(31, 17, 110, 0.65);
+        width: 14rem;
+        height: 3rem;
+        border: none;
+        color: white;
+      }
+      .table input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        color: black;
+        background-color: rgba(202, 201, 207, 0.74);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <h1 style="text-align: center">Registro</h1>
+      <form class="table" action="datos.php" method="POST">
+        <input type="text" name="nombre" placeholder="Nombres" size="40" required/>
+        <input type="text" name="apellidoP" placeholder="Apellido Paterno" size="40" required/>
+        <input type="text" name="apellidoM" placeholder="Apellido Materno" size="40" required/>
+        <input type="text" name="usuario" placeholder="Usuario" size="40" required/>
+        <input type="password" name="pass" placeholder="Contraseña" size="40" required/>
+        <p>Sexo:<input type="radio" name="sexo" value="Hombre" required />Hombre
+                <input type="radio" name="sexo" value="Mujer" required />Mujer
+        </p>
+        <p>Fecha de nacimiento :
+          <input style="width: 14rem" type="date" name="fecha" required />
+        </p>
+        <input type="text" name="telefono" placeholder="Telefono" size="40" required/>
+        <input type="email" name="email" placeholder="E-mail" size="40" required/>
+        <p>Ciudad :<select style="width: 23rem" name="ciudad">
+                        <option value="La paz">La Paz</option>
+                        <option value="Oruro">Oruro</option>
+                        <option value="Potosi">Potosi</option>
+                        <option value="Sucre">Sucre</option>
+                        <option value="Cochabamba">Cochabamba</option>
+                        <option value="Tarija">Tarija</option>
+                        <option value="Pando">Pando</option>
+                        <option value="Beni">Beni</option>
+                        <option value="Santa cruz">Santa Cruz</option>
+                   </select>
+        </p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Borrar" />
+      </form>
+    </div>
+  </body>
+</html>
